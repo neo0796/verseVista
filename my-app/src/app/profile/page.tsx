@@ -14,8 +14,8 @@ const ProfilePage = () => {
   const redeem = () => {
     setShowModal(true);
     const clientAddress = account;
-    const clientAmt = balance?.replaceAll('VV', '').trim();
-    axios.post('http://localhost:9000/withdraw', { clientAddress, clientAmt })
+    const claimAmt = balance?.replaceAll('VV', '').trim();
+    axios.post('http://localhost:9000/withdraw', { clientAddress, claimAmt })
     setTimeout(() => setShowModal(false), 2000); // Hide modal after 2 seconds
   };
 
